@@ -1,8 +1,8 @@
 # Angular2 Todo App
 
 ## Run it
-Run `git clone https://github.com/guypeer8/ng2-todoapp`.
-Run `npm install`.
-Run `ng serve` for a dev server. 
-Navigate to `http://localhost:4200/`.
+`git clone https://github.com/guypeer8/ng2-todoapp` ---->
+`npm install` ---->
+`ng serve` ---->
+Navigate to `http://localhost:4200/`
 
