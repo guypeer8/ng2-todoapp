@@ -1,0 +1,9 @@
+<div class="todos" [ngClass]="{border: todos.length > 0}">
+  <app-todo *ngFor="let todo of todos"
+            [todo]="todo"
+            [class.completed]="todo.completed"
+            (toggleTodoEmitter)="toggleTodo($event)"
+            (deleteTodoEmitter)="deleteTodo($event)"
+            (editTodoEmitter)="editTodo($event)"
+  ></app-todo>
+</div>

@@ -1,0 +1,22 @@
+<div>
+  <app-input
+    (addTodoEmitter)="onAddTodo($event)"
+  ></app-input>
+
+  <app-todos
+    [todos]="todosService.filteredTodos"
+    (toggleTodoEmitter)="onToggleTodo($event)"
+    (deleteTodoEmitter)="onDeleteTodo($event)"
+    (editTodoEmitter)="onEditTodo($event)"
+  ></app-todos>
+
+  <app-filters
+    [currentFilter]="todosService.filter"
+    (changeFilter)="onFilterChange($event)"
+    (removeCompletedEmitter)="onRemoveCompleted()"
+  ></app-filters>
+
+  <footer *ngIf="todosService.todos.length > 0">
+    <div>Todos Left: {{ todosService.todosLeft }}</div>
+  </footer>
+</div>

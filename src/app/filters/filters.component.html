@@ -1,0 +1,11 @@
+<ul class="filter">
+  <li *ngFor="let filter of filters"
+      (click)="setFilter(filter)"
+      [class.filter-chosen]="filter === currentFilter"
+      class="float-left"
+  >
+    {{ filter }}
+  </li>
+  <li (click)="removeCompleted()" class="float-right">Remove Completed</li>
+</ul>
+<div class="clear"></div>

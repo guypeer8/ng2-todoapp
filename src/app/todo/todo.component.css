@@ -1,0 +1,29 @@
+.todo {
+  margin-bottom: 15px;
+}
+.todo label {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.todo label input[type="checkbox"] {
+  visibility: hidden;
+}
+.todo label.label-completed {
+  background: #eee;
+}
+.todo span.completed {
+  font-style: italic;
+  text-decoration: line-through;
+}
+.todo button {
+  cursor: pointer;
+  border: none;
+  opacity: 0.85;
+  padding: 3px 8px;
+}
+.todo button:hover {
+  opacity: 1;
+}
+

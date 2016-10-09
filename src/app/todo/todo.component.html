@@ -1,0 +1,27 @@
+<div class="todo">
+  <label [class.label-completed]="todo.completed" class="float-left">
+    <input type="checkbox"
+           [checked]="todo.completed"
+           (click)="toggleTodo(todo)"
+           [disabled]="todo.isEditing"
+    />
+  </label>
+
+  <span *ngIf="!todo.isEditing"
+        (dblclick)="startEdit(todo)"
+        [class.completed]="todo.completed"
+        class="float-left"
+  >
+    {{ todo.text }}
+  </span>
+
+  <input type="text"
+         *ngIf="todo.isEditing"
+         [(ngModel)]="todo.editedText"
+         (keyup)="edit($event,todo)"
+         class="float-left"
+  />
+
+  <button (click)="deleteTodo(todo.id)" class="float-right">x</button>
+  <div class="clear"></div>
+</div>
