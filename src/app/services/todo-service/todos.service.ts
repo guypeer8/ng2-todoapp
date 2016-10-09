@@ -64,8 +64,8 @@ export class TodosService {
       todo.text = todo.editedText;
       todo.editedText = '';
       todo.isEditing = false;
+      this.updateLocalStorage(); // update local storage
     }
-    this.updateLocalStorage(); // update local storage
   }
 
   toggleTodo(todo: Todo): void {
